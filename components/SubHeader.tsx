@@ -1,12 +1,14 @@
+
+"use client"
 // components/SubHeader.tsx
-import Link from "next/link"
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 export default function SubHeader() {
   return (
@@ -14,9 +16,9 @@ export default function SubHeader() {
       <div className="container mx-auto flex justify-center px-4">
         <NavigationMenu>
           <NavigationMenuList className="gap-2">
-            
+            {/* Inside SubHeader.tsx NavigationMenuList */}
             <NavigationMenuItem>
-              <Link href="/all-ads" legacyBehavior passHref>
+              <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   All Ads
                 </NavigationMenuLink>
@@ -30,10 +32,9 @@ export default function SubHeader() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-
           </NavigationMenuList>
         </NavigationMenu>
       </div>
     </div>
-  )
+  );
 }
